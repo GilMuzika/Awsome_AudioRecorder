@@ -1,0 +1,21 @@
+Keystore file:
+the key: wsomeAudioRecorder
+the alias: AwsomeAudioRecorder
+the command: keytool -genkey -v -keystore AwsomeAudioRecorder.keystore -alias AwsomeAudioRecorder -keyalg RSA -keysize 2048 -validity 10000
+
+the password: qwerty
+What is your first and last name: Clark Gable
+What is the name of your organizational unit: R&D
+What is the name of your organization: CatCo., Inc
+What is the name of your City or Locality: National City
+What is the name of your State or Province: Alabama
+What is the two-letter country code for this unit: AL
+
+CN: Clark Gable, OU=R&D, O="CatCo., Inc", L=National City, ST=Alabama, C=AL
+
+
+
+The command for generating APK:
+
+npx react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/build/intermediates/res/merged/release/ && rm -rf android/app/src/main/res/drawable-* && rm -rf android/app/src/main/res/raw/* && cd android && ./gradlew assembleRelease && cd ..
+
